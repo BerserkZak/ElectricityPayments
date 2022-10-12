@@ -7,9 +7,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int time, amount;
+        int amount;
         char answer;
-        double price, power, result;
+        double price, power, result, time;
         System.out.println("Введите стоимость за КВт/ч:");
         price = input.nextDouble();
         do {
@@ -18,7 +18,7 @@ public class Main {
             System.out.println("Введите мощность прибора(ов):");
             power = input.nextDouble();
             System.out.println("Введите время работы в часах за рабочий день:");
-            time = input.nextInt();
+            time = input.nextDouble();
             result = ((((((power / 1000)) * (time * 30) * price)))) * amount;
             System.out.println("Хотите ввести показатели заного? Напишите Y если да, либо нажмите любую клавишу для пропуска");
             answer = input.next().charAt(0);
