@@ -1,4 +1,4 @@
-package hm.tz.bers;
+package hm.tz.ep;
 
 import java.util.Scanner;
 
