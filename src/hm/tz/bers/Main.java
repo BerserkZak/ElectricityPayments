@@ -8,16 +8,21 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         int time, amount;
+        char answer;
         double price, power, result;
         System.out.println("Введите стоимость за КВт/ч:");
         price = input.nextDouble();
-        System.out.println("Введите время работы в часах за рабочий день:");
-        time = input.nextInt();
-        System.out.println("Введите количество приборов:");
-        amount = input.nextInt();
-        System.out.println("Введите мощность прибора(ов):");
-        power = input.nextDouble();
-        result = ((((((power / 1000))*(time*30)*price))))*amount;
+        do {
+            System.out.println("Введите количество приборов:");
+            amount = input.nextInt();
+            System.out.println("Введите мощность прибора(ов):");
+            power = input.nextDouble();
+            System.out.println("Введите время работы в часах за рабочий день:");
+            time = input.nextInt();
+            result = ((((((power / 1000)) * (time * 30) * price)))) * amount;
+            System.out.println("Хотите ввести показатели заного? Напишите Y если да, либо нажмите любую клавишу для пропуска");
+            answer = input.next().charAt(0);
+        } while (answer == 'Y');
         System.out.println("За месяц вы заплатите: " + result + " рублей");
 
     }
