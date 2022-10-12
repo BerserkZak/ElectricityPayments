@@ -23,10 +23,10 @@ public class Main {
             System.out.println("Введите время работы в часах за рабочий день:");
             time = input.nextDouble();
             result = ((((((power / 1000)) * (time * 30) * price)))) * amount;
-            System.out.println("Хотите ввести показатели заного? Напишите 'Y' если да, либо нажмите любую букву для пропуска");
+            System.out.println("Хотите ввести показатели заного? Напишите 'Y' если да или любую букву для пропуска.");
             answer = input.next().charAt(0);
         } while (answer == 'Y');
-        System.out.println("За " + name + " в месяц вы заплатите: " + result + " рублей(я)");
+        System.out.println("За " + name + " в месяц вы заплатите: " + result + " рублей(я).");
 
     }
 
